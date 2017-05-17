@@ -1,0 +1,35 @@
+{
+  "name": "node-api-core-ts",
+  "version": "1.0.0",
+  "description": "Node.js Api using typescript",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./server.ts"
+  },
+  "author": "Danny Teixeira",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.8",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.5",
+    "mssql": "^4.0.4",
+    "node-restful": "^0.2.6",
+    "promisify": "0.0.3",
+    "promisify-node": "^0.4.0",
+    "resourcejs": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^2.2.2",
+    "@types/mongoose": "^4.7.11",
+    "@types/node": "^7.0.18",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.2"
+  }
+}
