@@ -6,13 +6,14 @@ import * as methodOverride from 'method-override';
 import * as _ from 'lodash';
 import { Classes } from './domain';
 import { Routes } from './routes';
+import * as settings from './appSettings';
 
 // Can not set a module variable in typescript
 // so this has to remain a javascript import
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-const routesController = new Routes();
+const routesController = new Routes(settings.setUp.routes);
 let app: express.Application = express();
 
 // Add Middleware necessary for REST API's

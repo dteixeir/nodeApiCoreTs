@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { config } from '../interfaces';
+import { IConfiguration } from '../interfaces';
 import { StringResource } from '../StringResource';
 
 export class Authentication {
@@ -8,7 +8,7 @@ export class Authentication {
 
     try {
       if (!token) throw StringResource.error[ 401 ];
-      var verified = jwt.verify(token, config.Secret);
+      var verified = jwt.verify(token, IConfiguration.Secret);
       // add middleware for control points?
 
       req.user = {

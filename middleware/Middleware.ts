@@ -1,6 +1,6 @@
 // package puts all requests through the middleware in order
 import { Authentication, AutoUpdate, Resource, Response } from './Index';
-import { config } from '../interfaces/';
+import { IConfiguration } from '../interfaces/';
 import { ErrorLogs } from '../domain/collections';
 import { StringResource } from '../StringResource';
 
@@ -19,7 +19,7 @@ export class MiddleWare {
     } catch (err) {
       // If in prod send back generic 400 and log error
       // If dev then send error back
-      if (config.Environment === 'dev') {
+      if (IConfiguration.Environment === 'dev') {
         res.status(400).send({ error: err });
       } else {
         var result: any = await ErrorLogs.create(err);

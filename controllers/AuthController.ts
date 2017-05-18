@@ -1,7 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { config } from '../interfaces/';
-import { StringResource } from '../stringResource';
-import { Schema } from 'mongoose';
+import { IConfiguration } from '../interfaces/';
 
 export class AuthController {
   public Authenticate(app, route, _collection: any) {
@@ -24,7 +22,7 @@ export class AuthController {
 
   private success(user, res) {
     try {
-      const token = jwt.sign(user, config.Secret, { expiresIn: '5h' });
+      const token = jwt.sign(user, IConfiguration.Secret, { expiresIn: '5h' });
       res.status(200).json({ token: token });
     } catch (err) {
       console.log(err);

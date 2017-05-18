@@ -1,4 +1,4 @@
-import { Schema, Model, model } from "mongoose";
+import { Schema, model } from "mongoose";
 import { Base } from './Base';
 
 export class Task extends Base {

@@ -1,11 +1,11 @@
 import { ObjectID } from 'mongodb';
-import { bcrypt } from 'bcryptjs';
-import { config } from '../interfaces';
+import * as bcrypt from 'bcryptjs';
+import { IConfiguration } from '../interfaces';
 
 export class AutoUpdate {
   private HashPassword(req) {
     if (req.body.Password) {
-      req.body.Password = bcrypt.hashSync(req.body.Password, config.Salt);
+      req.body.Password = bcrypt.hashSync(req.body.Password, IConfiguration.Salt);
     }
 
     return req;
