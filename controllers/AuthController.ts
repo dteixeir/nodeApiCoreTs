@@ -22,7 +22,7 @@ export class AuthController {
 
   private success(user, res) {
     try {
-      const token = jwt.sign(user, IConfiguration.Secret, { expiresIn: '5h' });
+      let token = jwt.sign(user, IConfiguration.Secret, { expiresIn: '5h' });
       res.status(200).json({ token: token });
     } catch (err) {
       console.log(err);

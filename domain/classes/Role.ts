@@ -5,5 +5,5 @@ export class Role extends Base {
   Name: { type: String, required: true };
 };
 
-const schema: Schema = new Schema({ ...Role });
-export const Roles = model("Role", schema);
+let schema: Schema = new Schema({ ...Role });
+export let Roles = model("Role", schema);

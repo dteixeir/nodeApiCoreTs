@@ -15,5 +15,5 @@ export class User extends Base {
 }
 
 // abstract this out?
-const schema: Schema = new Schema({ ...User });
-export const Users = model("Users", schema);
+let schema: Schema = new Schema({ ...User });
+export let Users = model("Users", schema);

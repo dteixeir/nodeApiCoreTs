@@ -8,5 +8,5 @@ export class ErrorLog extends Base {
   Collection: { type: String };
 };
 
-const schema: Schema = new Schema({ ...ErrorLog });
-export const ErrorLogs = model("ErrorLog", schema);
+let schema: Schema = new Schema({ ...ErrorLog });
+export let ErrorLogs = model("ErrorLog", schema);

@@ -7,5 +7,5 @@ export class Task extends Base {
   Files: [ String ];
 }
 
-const schema: Schema = new Schema({ ...Task });
-export const Tasks = model("Task", schema);
+let schema: Schema = new Schema({ ...Task });
+export let Tasks = model("Task", schema);

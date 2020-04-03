@@ -10,7 +10,7 @@ import * as settings from './appSettings';
 
 // Can not set a module variable in typescript
 // so this has to remain a javascript import
-const mongoose = require('mongoose');
+let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const routesController = new Routes(settings.setUp.routes);

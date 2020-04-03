@@ -10,5 +10,5 @@ export class TaskList extends Base {
   ];
 }
 
-const schema: Schema = new Schema({ ...TaskList });
-export const TaskLists = model("TaskList", schema);
+let schema: Schema = new Schema({ ...TaskList });
+export let TaskLists = model("TaskList", schema);
