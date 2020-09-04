@@ -16,7 +16,7 @@
     "jsonwebtoken": "^7.4.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.8",
-    "mongodb": "^2.2.26",
+    "mongodb": "^3.6.1",
     "mongoose": "^4.9.5",
     "mssql": "^4.0.4",
     "node-restful": "^0.2.6",
